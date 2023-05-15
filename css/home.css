@@ -1,0 +1,115 @@
+/* MAIN */
+main {
+  grid-area: content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+.main__episodes{
+  height: 100%;
+}
+
+.home {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../recursos/image/background_tela_1.png);
+  box-shadow: inset 0px -40px 40px #000;
+}
+
+.content-home {
+  height: 100vh;
+  width: 70%;
+  gap: 8px;
+  display: grid;
+  grid-template-areas:
+    "image text"
+    "image button";
+}
+
+.home__text {
+  display: flex;
+  margin-top: 110px;
+  align-items: end;
+  text-align: center;
+  color: var(--letter-color);
+  font-size: 90px;
+  grid-area: text;
+  justify-content: end;
+}
+.home__text h1 {
+  color: var(--letter-color);
+  text-shadow: -1px -1px 0px #fff, -1px 1px 0px #fff, 1px -1px 0px #fff, 1px 0px 0px #fff;
+}
+
+.text__title {
+  z-index: 1;
+}
+.text__title span {
+  font-size: 70px;
+  color: white;
+  text-shadow: -1px -1px 0px var(--letter-color), -1px 1px 0px var(--letter-color), 1px -1px 0px var(--letter-color),
+    1px 0px 0px var(--letter-color);
+}
+
+.pickle {
+  position: fixed;
+  display: flex;
+  align-self: center;
+  padding-bottom: 45px;
+}
+
+.pickle img {
+  width: 100px;
+  height: 150px;
+}
+
+.image__home {
+  grid-area: image;
+  display: flex;
+  align-items: flex-end;
+  justify-content: right;
+  height: 95%;
+}
+.image__home img {
+  height: 560px;
+  width: 560px;
+}
+
+@media screen and (max-width: 640px) {
+  .content-home {
+    width: 90%;
+    grid-template-areas:
+      "text"
+      "image"
+      "button";
+  }
+
+  .home__text {
+    margin-top: 60px;
+    font-size: 50px;
+  }
+  
+  .text__title span {
+    font-size: 40px;
+  }
+
+  .image__home {
+    justify-content: center;
+    align-items: center;
+    height: 60%;
+  }
+  .image__home img {
+    height: 320px;
+    width: 320px;
+  }
+
+  .pickle {
+    padding-bottom: 30px;
+  }
+}
